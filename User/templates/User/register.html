@@ -1,0 +1,39 @@
+{% load static %}
+<html lang="en">
+      <style>
+   form {
+    margin-left: 41%;
+    width: 300px;
+    margin-top: 50px;
+}
+       </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'MyPolls/static/MyPolls/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+      <style>
+       BODY
+       {
+        background: linear-gradient(21deg, #dd03e4, #5611ec);
+       }
+  </style>
+<div class="features">
+     <form method="post">
+         <p align="center" style="font-size: 40px; margin-top: 100px">
+         Pегистрация
+        <div align="center" style="font-size: 20px; margin-top: 100px">
+        {{ form.username }}<br>
+            {{ form.password }}<br>
+        {% csrf_token %}
+        <input class="btn btn-dark" type = "submit" value="Register">
+        </div>
+              <h3>
+            <p align="center"  style="font-size: 1px; margin-top: 133px">
+
+        </h3>
+     </form>
+</div>
+</html>
